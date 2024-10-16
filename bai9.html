@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .viewer img {
+            width: 700px;
+            max-height: 300px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .smallimg {
+            display: flex;
+            justify-content: center;
+        }
+
+        .smallimg img {
+            width: 100px;
+            height: 100px;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .smallimg img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="viewer">
+            <img id="bigImage" src="image/big.png" alt="Main Image">
+        </div>
+        <div class="smallimg">
+            <img class="small" src="image/small.png" alt="Image 1" onclick="changeImage('image/small.png')">
+            <img class="small" src="image/small2.png" alt="Image 2" onclick="changeImage('image/small2.png')">
+            <img class="small" src="image/small3.png" alt="Image 3" onclick="changeImage('image/small3.png')">
+            <img class="small" src="image/small4.png" alt="Image 4" onclick="changeImage('image/small4.png')">
+            <img class="small" src="image/small.png" alt="Image 5" onclick="changeImage('image/small.png')">
+            <img class="small" src="image/small3.png" alt="Image 3" onclick="changeImage('image/small3.png')">
+        </div>
+    </div>
+    <script>
+        function changeImage(src) {
+            document.getElementById('bigImage').src = src;
+        }
+    </script>
+</body>
+
+</html>

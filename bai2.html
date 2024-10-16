@@ -22,10 +22,9 @@
     <button id="remove-button">Remove</button>
 
     <script>
-        document.addEventListener('', function () {
+        document.addEventListener('DOMContentLoaded', function () {
             const numberList = document.getElementById('number');
             const removeButton = document.getElementById('remove-button');
-
             removeButton.addEventListener('click', function () {
                 const listItems = numberList.getElementsByTagName('li');
                 if (listItems.length > 0) {
@@ -33,6 +32,7 @@
                 }
             });
         });
+
         // removeButtons.forEach(button => {
         //     button.addEventListener("click", () => {
         //         const listItem = button.parentElement;

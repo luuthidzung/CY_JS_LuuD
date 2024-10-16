@@ -13,8 +13,6 @@
         <li>2</li>
     </ul>
     <button id="add-button">Add</button>
-
-
     <script>
         const addButton = document.querySelector("#add-button");
         const numberList = document.querySelector("#number");
@@ -23,17 +21,8 @@
             const newNumber = document.createElement("li");
             newNumber.textContent = nextNumber;
             numberList.appendChild(newNumber);
-            ne
+            nextNumber++;
         });
-
-
-
-        //     addButton.addEventListener("click", () => { 
-        //     const newNumber = document.createElement("li");
-        //     newNumber.textContent = nextNumber;
-        //     numberList.appendChild(newNumber);
-        //     nextNumber++;
-        // });
     </script>
 </body>
 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai5</title>
+</head>
+
+<body>
+    <ul id="number">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>10</li>
+    </ul>
+    <ul>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>7</li>
+        <li>8</li>
+        <li>10</li>
+        <li>12</li>
+    </ul>
+    <ul id="result">
+    </ul>
+    <button id="copy">copy</button>
+    <script>
+        document.getElementById('copy').addEventListener('click', function () {
+            const firstList = document.getElementById('number').getElementsByTagName('li');
+            const secondList = document.getElementsByTagName('ul')[1].getElementsByTagName('li');
+            const copyList = document.getElementById('result');
+            copyList.innerHTML = '';
+
+            for (let i = 0; i < firstList.length; i++) {
+                for (let j = 0; j < secondList.length; j++) {
+                    if (firstList[i].textContent === secondList[j].textContent) {
+                        const newItem = document.createElement('li');
+                        newItem.textContent = firstList[i].textContent;
+                        copyList.appendChild(newItem);
+                        break;
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

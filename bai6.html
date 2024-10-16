@@ -1,0 +1,47 @@
+<!-- Khi click vào mỗi thẻ <a>, load ảnh vào thẻ <img> có id=”image” -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai5</title>
+    <style>
+        #image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        a {
+            display: block;
+            margin-bottom: 10px;
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <img id="image" src="" alt="Loaded image will appear here" />
+    <p><a onclick="load(this)" href="javascript:void(0)">
+            https://images.pexels.com/photos/236047/pexels-photo-236047.jpeg?auto=compress&cs=tinysrgb&h=350</a></p>
+    <p><a onclick="load(this)" href="javascript:void(0)">
+            https://estaticos.qdq.com/swdata/photos/719/719902669/Naturaleza_Fondo-de-pantalla-Naturaleza-103.jpg</a>
+    </p>
+    <p><a onclick="load(this)" href="javascript:void(0)">
+            https://c1.staticflickr.com/5/4126/5014409129_a34e7856bf_b.jpg</a></p>
+
+    <script>
+        function load(element) {
+            const imageUrl = element.textContent;
+            document.getElementById('image').src = imageUrl;
+        }
+    </script>
+</body>
+
+</html>

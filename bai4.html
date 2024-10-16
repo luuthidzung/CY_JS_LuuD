@@ -16,17 +16,16 @@
         <li>5</li>
     </ul>
     <ul id="number-copy">
-
     </ul>
     <button id="copy">copy</button>
     <script>
         const copyButton = document.getElementById('copy');
         const sourceList = document.getElementById('number');
-        const targetList = document.getElementById('number-copy');
-        copyButton.addEventListener('click', function () {
+        const numberCopy = document.getElementById('number-copy');
+        copyButton.addEventListener('click', () => {
             const newList = sourceList.cloneNode(true);
             newList.removeAttribute('id');
-            targetList.appendChild(newList);
+            numberCopy.appendChild(newList);
         });
     </script>
 </body>
