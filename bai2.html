@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai2</title>
+</head>
+
+<body>
+    <ul id="number">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+    </ul>
+    <button id="remove-button">Remove</button>
+
+    <script>
+        document.addEventListener('', function () {
+            const numberList = document.getElementById('number');
+            const removeButton = document.getElementById('remove-button');
+
+            removeButton.addEventListener('click', function () {
+                const listItems = numberList.getElementsByTagName('li');
+                if (listItems.length > 0) {
+                    numberList.removeChild(listItems[listItems.length - 1]);
+                }
+            });
+        });
+        // removeButtons.forEach(button => {
+        //     button.addEventListener("click", () => {
+        //         const listItem = button.parentElement;
+        //         const itemList = listItem.parentElement;
+        //         itemList.removeChild(listItem);
+        //     });
+        // });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="number">
+        <li>1</li>
+        <li>2</li>
+    </ul>
+    <button id="add-button">Add</button>
+
+
+    <script>
+        const addButton = document.querySelector("#add-button");
+        const numberList = document.querySelector("#number");
+        let nextNumber = numberList.children.length + 1;
+        addButton.addEventListener('click', () => {
+            const newNumber = document.createElement("li");
+            newNumber.textContent = nextNumber;
+            numberList.appendChild(newNumber);
+            ne
+        });
+
+
+
+        //     addButton.addEventListener("click", () => { 
+        //     const newNumber = document.createElement("li");
+        //     newNumber.textContent = nextNumber;
+        //     numberList.appendChild(newNumber);
+        //     nextNumber++;
+        // });
+    </script>
+</body>
+
+</html>
