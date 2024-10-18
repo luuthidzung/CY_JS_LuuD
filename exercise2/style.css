@@ -1,37 +1,174 @@
-.wrapper {
-    width: 70%;
-    margin: 20px auto;
-}
-
-.wrapper .score {
-    text-align: center;
-    font-size: 30px;
-}
-
-.wrapper .question {
-    font-size: 26px;
-}
-
-.wrapper .answers .answer {
-    float: left;
-    width: 45%;
-    text-align: center;
-    border: 1px dashed #cdcdcd;
+* {
     box-sizing: border-box;
-    margin: 10px;
-    padding: 20px;
-    cursor: pointer;
+    margin: 0;
+    padding: 0;
 }
 
-.wrapper .answers .answer:hover {
-    background: coral;
+body {
+    background-image: url(bg.png);
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 100px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #000000;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.5), 0 0 30px rgba(0, 255, 255, 0.5), 0 0 40px rgba(0, 255, 255, 1); /* Neon effect */
+    animation: neon-glow 1.5s infinite alternate ease-in-out;
+}
+
+.question-card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.5), 0 0 30px rgba(0, 255, 255, 0.5), 0 0 40px rgba(0, 255, 255, 1); /* Neon effect */
+    animation: neon-glow 0.5s infinite alternate ease-in-out;
+}
+
+/* Hiệu ứng phát sáng */
+@keyframes neon-glow {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.5), 0 0 30px rgba(0, 255, 255, 0.5), 0 0 40px rgba(0, 255, 255, 1);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.8), 0 0 40px rgba(0, 255, 255, 0.8), 0 0 50px rgba(0, 255, 255, 1);
+    }
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.question-content {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.answer-option {
+    
+    padding: 12px 15px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.answer-option:hover {
+    background-color: #f8a32d;
+}
+
+.selected {
+    background-color: #e2e8f0;
+}
+
+.correct {
+    background-color: #4ade80 !important;
     color: white;
 }
 
-#next-btn {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
+.wrong {
+    background-color: #ef4444 !important;
+    color: white;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #e2e8f0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.5), 0 0 30px rgba(0, 255, 255, 0.5), 0 0 40px rgba(0, 255, 255, 1); /* Neon effect */
+    animation: neon-glow 1.5s infinite alternate ease-in-out;
+}
+
+.progress {
+    height: 100%;
+    background-color: #3b82f6;
+    border-radius: 5px;
+    transition: width 0.3s ease;
+}
+
+.question-info {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.result-container {
+    text-align: center;
+    margin-top: 20px;
     font-size: 18px;
+    animation: fadeIn 0.5s ease-out;
+    
+    p{
+        color:white;
+    }
+}
+
+.retry-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #22c55e;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
     cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.retry-btn:hover {
+    background-color: #16a34a;
+}
+
+.next-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.next-btn:hover {
+    background-color: #2563eb;
+}
+
+.next-btn:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+    
+    .question-content {
+        font-size: 16px;
+    }
 }
