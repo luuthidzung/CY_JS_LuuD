@@ -30,15 +30,14 @@ function loadQuestions() {
     const questionsText = data.map((item, index) => {
         return `
         <span class="question">
-        
          ${item.question}
          <span class="indicator" id="indicator-${index}">${index + 1}</span>
          <input type="text" id="answer-${index}"placeholder="_______________________"></span>
          
          ${index < data.length - 1 ? '.' : ''}`;
-    }).join(' '); // Dùng dấu chấm giữa các câu hỏi
+         }).join(' '); // Dùng dấu chấm giữa các câu hỏi
     
-    questionsContainer.innerHTML = questionsText; // Hiển thị tất cả câu hỏi
+          questionsContainer.innerHTML = questionsText; // Hiển thị tất cả câu hỏi
 }
 
 document.getElementById('submitBtn').addEventListener('click', () => {
@@ -57,6 +56,4 @@ document.getElementById('submitBtn').addEventListener('click', () => {
         }
     });
 });
-
-// Load questions on page load
-loadQuestions();
+          loadQuestions();

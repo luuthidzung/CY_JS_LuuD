@@ -6,15 +6,13 @@ const resultElement = document.getElementById('result');
 function calculate(operator) {
     const num1 = parseFloat(num1Input.value); 
     const num2 = parseFloat(num2Input.value); 
-
    
-    if (isNaN(num1) || isNaN(num2)) {
-        resultElement.textContent = 'Vui lòng nhập số hợp lệ!';
-        return;
-    }
+    // if (isNaN(num1) || isNaN(num2)) {
+    //     resultElement.textContent = 'Input again!';
+    //     return;
+    // }
 
     let result;
-
     switch (operator) {
         case '+':
             result = num1 + num2;
@@ -27,7 +25,7 @@ function calculate(operator) {
             break;
         case '/':
             if (num2 === 0) {
-                resultElement.textContent = 'Không thể chia cho 0!';
+                resultElement.textContent = 'Error!!';
                 return;
             }
             result = num1 / num2;

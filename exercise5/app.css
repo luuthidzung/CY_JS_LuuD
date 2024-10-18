@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+::after,::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.body{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    font-family: 'Poppins',sans-serif;
+    background: #dfe3f2;
+}
+.card{
+    margin-left: 35%;
+    width: 400px;
+    height:auto;
+    padding: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    overflow: hidden;
+    background: #fafbff;
+}
+.card .top{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.card p{
+    font-size:0.9rem ;
+    font-weight: 600;
+    color:#878a9a;
+    font-family: Poppins;
+}
+.card button{
+    outline: 0;
+    border:0;
+    -webkit-appearance: none;
+    background: #6e73d8;
+    border-radius: 5px;
+    color:#fff;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+    font-size: 0.8rem;
+    font-family: Poppins;
+    padding: 8px 13px;   
+}
+.card button:hover{
+    opacity: 0.8;
+}
+.card button:active{
+    transform: translateY(5px);
+}
+.card form{
+    width: 100%;
+    height: 160px;
+    border-radius: 5px;
+    border: 2px dashed #d5d5e1;
+    color:#c8c9dd;
+    font-size: 0.9rem;
+    font-weight: 500;
+    position: relative;
+    background: #dfe3f259;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    -webkit-user-select: none;
+    user-select: none;
+    margin-top: 10px;
+
+}
+.card form.dragover{
+    background: rgba(0, 0, 0, 0.4);
+}
+.card form.dragover span{
+    font-size: 28px;
+}
+.card input{
+    display: none;
+}
+.card span{
+    font-size: 18px;
+}
+.card .select{
+    color:#5256ad;
+    margin-left: 4px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.card .select:hover{
+    opacity: 0.8;
+}
+.card .container{
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-height: 200px;
+    margin-top: 10px;
+    overflow-y: auto;
+}
+.card .container .image{
+    width: calc(26%-19px);
+    margin-right: 15px;
+    height: 75px;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.card .container .image img{
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+}
+.card .container .image span{
+    position: absolute;
+    top: 2px;
+    right:9px;
+    font-size: 10px;
+    cursor: pointer;
+}
