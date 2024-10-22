@@ -257,6 +257,35 @@ nav .circle:hover {
         box-shadow: 0 0 20px rgba(255, 105, 180, 0.8), 0 0 30px rgba(255, 105, 180, 0.8), 0 0 40px rgba(255, 105, 180, 0.8), 0 0 50px rgba(255, 105, 180, 1);
     }
 }
+
+.upload-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+#uploadBtn {
+    background-color: #f53192; 
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 8px; 
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#uploadBtn:hover {
+    background-color: #a04580;
+}
+
+#upload {
+    display: none;
+}
+
 /* @keyframes rotate {
     0% {
         transform: rotate(0deg); 

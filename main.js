@@ -48,6 +48,25 @@ function loadSong(index) {
     song.src = currentSong.audio;
     updatePlaylistUI();
 }
+
+function uploadSong() {
+    const fileInput = document.getElementById('upload');
+    const file = fileInput.files[0]; 
+    if (file) {
+        const songUrl = URL.createObjectURL(file); 
+        const newSong = {
+            title: file.name.replace(/\.[^/.]+$/, ""), 
+            artist: "Unknown Artist", 
+            cover: "media/default_cover.png", 
+            audio: songUrl 
+        };
+
+        playlist.push(newSong); 
+        createPlaylist();
+        alert("Song added to playlist!");
+    }
+}
+
 // tao playlist tu icon bar----------------------------------------------------------
 function createPlaylist() {
     playlistContainer.innerHTML = '<h2>Playlist</h2>';
@@ -133,15 +152,14 @@ song.addEventListener('timeupdate', () => {
 
 song.addEventListener('loadedmetadata', () => {
     progress.style.width = 0; 
-    circle.style.left = '0%'; // Reset position of the circle
+    circle.style.left = '0%'; 
 });
 
-// Xử lý click trên thanh trượt để điều chỉnh vị trí phát
 progressContainer.addEventListener('click', (event) => {
     const rect = progressContainer.getBoundingClientRect();
     const x = event.clientX - rect.left; 
     const percent = x / rect.width; 
-    song.currentTime = percent * song.duration; // Cập nhật currentTime của bài hát
+    song.currentTime = percent * song.duration; 
 });
 
 //-----------------------------------------------------------------
