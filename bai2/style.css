@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+body {
+    margin: 0; 
+    background-color: #ffffff;
+}
+
+.container {
+    width: 100%;
+    
+}
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    font-family: 'Comic Sans MS';
+    font-size: 25px;
+    animation: changeBackgroundColor 3s infinite;   
+}
+
+.game {
+    display: none;
+    position: relative; 
+    width: 100vw; 
+    height: 100vh; 
+    animation: changeBackgroundColor 3s infinite;
+    background-size: cover; 
+    background-position: center; 
+}
+
+#intro img {
+    margin-top: 100px;
+    width: 30%;
+    width: 200px; 
+    animation: shake 5s infinite;
+}
+
+#startButton {
+    padding: 30px;
+    font-weight: bold;
+    font-size: 25px;
+    border-radius: 50px;
+    margin-top: 90px;
+    font-family: Poppins;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 5px 10px rgba(16, 16, 16, 0.22);
+    animation: changeBackgroundColor 5s infinite;
+}
+
+#basket {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    width: 150px;
+    height: auto;
+    transform: translateX(-50%);
+}
+
+#egg {
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: auto;
+    transform: translateX(-50%);
+}
+.egg-letter {
+    position: absolute;
+    top: 9%; 
+    left: 40%; 
+    transform: translate(-50%, -50%); 
+    font-size: 24px; 
+    color: rgb(0, 0, 0); 
+    font-weight: bold; 
+    pointer-events: none; 
+    font-family:'Poppins';
+}
+
+
+
+#egg img{
+    width: 100%;
+    margin-bottom: 150px;
+}
+
+#score {
+    margin-top: 5px;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Comic Sans MS';
+    font-weight: bold;
+}
+
+
+@keyframes changeBackgroundColor {
+    0% {
+        background-color: #c9e4fe;
+    }
+    50% {
+        background-color: #b1d6d5;
+    }
+    100% {
+        background-color: #c9e4fe;
+    }
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-50px); }
+    50% { transform: translateX(100px); }
+    75% { transform: translateX(-50px); }
+    100% { transform: translateX(0); }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Egg Catching Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Intro Section ------------------------------------------------------------------------>
+        <div id="intro">
+            <h1>Welcome to the Egg Catching Game !</h1>
+            <p>Move the mouse to control the basket and catch the falling eggs.</p>
+            <button id="startButton">Start Game</button>
+            <img src="image/bg.svg" alt="Background Image">
+        </div>
+
+        <!-- Game Section (Hidden by default) ------------------------------------------------------->
+        <div class="game" style="display: none;">
+            <div id="basket">
+                <img src="image/basket.svg" alt="Basket Image">
+            </div>
+            <div id="egg">
+                <img src="image/firefire.svg" alt="Egg Image" >
+                <div class="egg-letter"></div> 
+            </div>
+
+            <!-- Score Display ----------------------------------------------------------------------->
+            <div id="caught-eggs"></div>
+            <div id="score">Score: 0</div>
+        </div>
+
+        <!--end------------------------------------------->
+        <div id="endgame">
+
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
